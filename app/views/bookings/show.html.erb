@@ -25,12 +25,14 @@
 		<table class="flight-info">
 			<tr>
 				<th>Name</th>
-				<td><%= @booking.passenger.name %></th>
-			</tr>
-			 <tr>
 				<th>Email</th>
-				<td><%= @booking.passenger.email %></td>
 			</tr>
+			<% @booking.passengers.each do |passenger| %>
+				 <tr>
+					<td><%= passenger.name %></td>
+					<td><%= passenger.email %></td>
+				</tr>
+			<% end %>
 		</table>
-
+	</div>
 </section>

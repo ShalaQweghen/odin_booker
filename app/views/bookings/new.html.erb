@@ -20,15 +20,18 @@
 			</table>
 			<%= form_for(@booking, url: bookings_new_path) do |f| %>
 				<%= f.text_field(:flight_id, type: "hidden", value: @flight.id) %>
-				<%= f.text_field(:passengers, type: "hidden", value: params[:passengers]) %>
-				<%= f.fields_for(:passenger) do |form| %>
-					<div class="user">
-						<%= form.label(:name, class: "label label-name") %>
-						<%= form.text_field(:name, class: "input name") %>
-						<%= form.label(:email, class: "label label-name") %>
-						<%= form.email_field(:email, class: "input email") %>
-				<% end %>
-				<%= f.submit "Submit", class: "flights-submit user-submit" %>
+				<%= f.text_field(:amount, type: "hidden", value: params[:amount]) %>
+				<div class="user">
+					<%= f.fields_for(:passengers) do |form| %>
+						<div class="passenger">
+							<h3>Passenger</h3>
+							<%= form.label(:name, class: "label label-name") %>
+							<%= form.text_field(:name, class: "input name") %>
+							<%= form.label(:email, class: "label label-name") %>
+							<%= form.email_field(:email, class: "input email") %>
+						</div>
+					<% end %>
+				<%= f.submit "Book", class: "flights-submit user-submit" %>
 				</div>
 			<% end %>
 </section>

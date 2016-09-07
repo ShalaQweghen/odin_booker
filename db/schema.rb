@@ -20,11 +20,10 @@ ActiveRecord::Schema.define(version: 20160906114541) do
   end
 
   create_table "bookings", force: :cascade do |t|
-    t.integer  "passenger_id"
     t.integer  "flight_id"
-    t.integer  "passengers"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.integer  "amount"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "flights", force: :cascade do |t|
@@ -40,6 +39,7 @@ ActiveRecord::Schema.define(version: 20160906114541) do
   create_table "passengers", force: :cascade do |t|
     t.string   "name"
     t.string   "email"
+    t.integer  "booking_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
