@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>The Odin Booker</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'reset' %>
+    <%= stylesheet_link_tag	   'main' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+ 	<header>
+	  	<h1><%= link_to "The Odin Booker", root_url %></h1>
+	</header>
+
+	<% unless flash.empty? %>
+		<%= render "layouts/alert" %>
+	<% end %>
+
+	<%= yield %>
+
+	<footer>
+	    <small>by S.Q.</small>
+	</footer>
+  </body>
+</html>

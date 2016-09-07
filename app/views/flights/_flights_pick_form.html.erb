@@ -1,0 +1,29 @@
+<section class="flights">
+	<h3>Pick your flight</h3>
+	<table>
+		<tr>
+			<th class="empty"></th>
+			<th>Flight No</th>
+			<th>Departure</th>
+			<th>Arrival</th>
+			<th>Date</th>
+			<th>Time</th>
+			<th>Duration</th>
+		</tr>
+		<%= form_tag({controller: "bookings", action: "new"}, method: "get") do |f| %>
+			<% @flights.each do |flight| %>
+				 <tr>
+					<td><%= radio_button_tag(:flight, flight.name, :checked) %></td>
+					<td><%= flight.name %></td>
+					<td><%= flight.departure.code %></td>
+					<td><%= flight.arrival.code %></td>
+					<td><%= flight.date.strftime("%m-%d-%Y") %></td>
+					<td><%= flight.date.strftime("%H:%M") %></td>
+					<td><%= flight.duration %> mins</td>
+				</tr>
+			<% end %>
+			</table>
+			<%= hidden_field_tag(:passengers, params[:amount]) %>
+			<%= submit_tag "Submit", class: "flights-submit" %>
+		<% end %>
+</section>

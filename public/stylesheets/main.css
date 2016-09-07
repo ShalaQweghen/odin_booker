@@ -1,0 +1,252 @@
+/* MAIN */
+
+html {
+	position: relative;
+	min-height: 100%;
+}
+
+body {
+	background-color: #dfe2e5;
+	height: 100%;
+	min-height: 100%;
+}
+
+header {
+	width: 100%;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	padding-top: 10px;
+	height: 70px;
+	background-color: #77a198;
+	box-shadow: 0 1px 2px rgba(0,0,0,.1);
+}
+
+footer {
+	position: absolute;
+	bottom: 0;
+	box-shadow: 0 1px 2px rgba(0,0,0,.1);
+	box-sizing: border-box;
+	width: 100%;
+	height: 60px;
+	background-color: #77a198;
+	text-align: center;
+	padding-top: 20px;
+	color: #888;
+}
+
+h1 {
+	font-size: 40px;
+	font-weight: 100;
+	text-align: left;
+	margin: 10px 20px;
+	color: #648880;
+}
+
+h2 {
+	text-align: center;
+	font-size: 18px;
+	margin-bottom: 20px;
+	color: #648880;
+}
+
+h3 {
+	font-weight: 800;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	border-bottom: 1px solid #dfe2e5;
+	color: #648880;
+}
+
+table {
+	width: 100%;
+	margin-bottom: 40px;
+	color: #888;
+}
+
+td, th {
+	text-align: left;
+	padding: 8px 0;
+}
+
+th {
+	font-weight: 600;
+	border-bottom: solid 1px #dfe2e5;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.alert {
+	position: absolute;
+	right: 0;
+	left: 400px;
+	top: 95px;
+	width: 500px;
+	height: 20px;
+	padding: 5px;
+	background-color: #f2dede;
+	border-color: #eed3d7;
+	color: #b94a48;
+	border-radius: 5px;
+	text-align: center;
+}
+/* Flight */
+
+
+.flights-form, .flights {
+	box-sizing: border-box;
+	background-color: white;
+	box-shadow: 0 1px 2px rgba(0,0,0,.1);
+	border: 1px solid #dfe2e5;
+	border-radius: 5px;
+	position: relative;
+	width: 720px;
+	margin: auto;
+}
+
+.flights-form {
+	padding: 20px 60px 60px 60px;
+	margin-top: 140px;
+}
+
+.flights {
+	padding: 20px 50px 50px 50px;
+	margin-top: 50px;
+	margin-bottom: 120px;
+	width: 870px;
+}
+
+.first, .second {
+	display: inline-block;
+}
+
+.first {
+	margin-right: 150px;
+}
+
+.from, .to, .date, .amount {
+	margin-bottom: 40px;
+}
+
+.input {
+	display: block;
+	background-color: white;
+	border-radius: 3px;
+	border: 1px solid #dfe2e5;
+	margin-top: 15px;
+	font-size: 20px;
+	color: #888;
+}
+
+.input option {
+	width: 200px;
+}
+
+.label {
+	font-size: 20px;
+	color: #648880;
+}
+
+.empty {
+	border: 0;
+}
+
+.flights-submit {
+	display: block;
+	position: absolute;
+	width: 150px;
+	height: 40px;
+	right: 60px;
+	bottom: 30px;
+	background-color: #648880;
+	border-bottom: solid 1px #dfe2e5;
+	border-radius: 5px;
+}
+
+.form-submit {
+	display: block;
+	position: absolute;
+	width: 150px;
+	height: 40px;
+	right: 60px;
+	bottom: 30px;
+	background-color: #648880;
+	border-bottom: solid 1px #dfe2e5;
+	border-radius: 5px;
+}
+
+.flights-submit:hover, .form-submit:hover {
+	background: #77a198;
+}
+
+/* Booking */
+
+.booking {
+	box-sizing: content-box;
+	padding-bottom: 100px;
+	margin-top: 120px;
+	margin-bottom: 90px;
+	width: 800px;
+}
+
+.flight-info {
+	border: 1px solid #dfe2e5;
+	margin-bottom: 20px;
+}
+
+.flight-info th, .flight-info td {
+	padding-left: 17px;
+}
+
+.user {
+	width: 400px;
+	height: 100%;
+	margin: auto;
+}
+
+.name, .email {
+	padding: 7px;
+	font-size: 17px;
+	display: inline-block;
+	margin-bottom: 20px;
+}
+
+.user-submit {
+	display: relative;
+	right: 270px;
+	bottom: 40px;
+}
+
+.label-name {
+	font-size: 18px;
+	padding-right: 20px;
+}
+
+/* Show */
+
+.flight-details {
+	margin-top: 30px;
+}
+
+.personal-details {
+	margin-top: 40px;
+}
+
+.personal-details table {
+	margin: auto;
+	text-align: center;
+	width: 450px;
+}
+
+.personal-details td {
+	border: 1px solid #dfe2e5;
+}
+
+.show {
+	margin-top: 150px;
+	padding-bottom: 50px;
+}

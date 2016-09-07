@@ -1,0 +1,34 @@
+<section class="flights-form booking">
+	<h3>Personal Information</h3>
+			<table class="flight-info">
+				<tr>
+					<th>Flight No</th>
+					<th>Departure</th>
+					<th>Arrival</th>
+					<th>Date</th>
+					<th>Time</th>
+					<th>Duration</th>
+				</tr>
+				 <tr>
+					<td><%= @flight.name %></td>
+					<td><%= @flight.departure.code %></td>
+					<td><%= @flight.arrival.code %></td>
+					<td><%= @flight.date.strftime("%m-%d-%Y") %></td>
+					<td><%= @flight.date.strftime("%H:%M") %></td>
+					<td><%= @flight.duration %> mins</td>
+				</tr>
+			</table>
+			<%= form_for(@booking, url: bookings_new_path) do |f| %>
+				<%= f.text_field(:flight_id, type: "hidden", value: @flight.id) %>
+				<%= f.text_field(:passengers, type: "hidden", value: params[:passengers]) %>
+				<%= f.fields_for(:passenger) do |form| %>
+					<div class="user">
+						<%= form.label(:name, class: "label label-name") %>
+						<%= form.text_field(:name, class: "input name") %>
+						<%= form.label(:email, class: "label label-name") %>
+						<%= form.email_field(:email, class: "input email") %>
+				<% end %>
+				<%= f.submit "Submit", class: "flights-submit user-submit" %>
+				</div>
+			<% end %>
+</section>

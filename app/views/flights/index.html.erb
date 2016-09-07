@@ -1,0 +1,32 @@
+<section class="flights-form">
+	<h3>Choose your destination</h3>
+	<%= form_tag({controller: "flights", action: "index" }, method: "get") do %>
+		<div class="first">
+			<div class="from">
+				<%= label_tag :departure_id, "From:", class: "label" %>
+				<%= select_tag(:departure_id, options_for_select(@airports), class: "input") %>
+			</div>
+			<div class="to">
+				<%= label_tag :arrival_id, "To:", class: "label" %>
+				<%= select_tag(:arrival_id, options_for_select(@airports), class: "input" ) %>
+			</div>
+		</div>
+		<div class="second">
+			<div class="date">
+				<%= label_tag :date, "Date:", class: "label" %>
+				<%= select_tag(:date, options_for_select(@dates), class: "input") %>
+			</div>
+			<div class="amount">
+				<%= label_tag :amount, "Passengers:", class: "label" %>
+				<%= select_tag(:amount, options_for_select([1,2,3,4]), class: "input") %>
+			</div>
+		</div>
+		<div class="submit">
+			<%= submit_tag "Submit", class: "form-submit" %>
+		</div>
+	<% end %>
+</section>
+
+<% if @flights && !@flights.empty? %>
+	<%= render "flights_pick_form" %>
+<% end %>

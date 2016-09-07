@@ -1,0 +1,36 @@
+<section class="flights-form booking show">
+	<div class="flight-details">
+		<h2>- Flight Details -</h2>
+		<table class="flight-info">
+			<tr>
+				<th>Flight No</th>
+				<th>Departure</th>
+				<th>Arrival</th>
+				<th>Date</th>
+				<th>Time</th>
+				<th>Duration</th>
+			</tr>
+			 <tr>
+				<td><%= @booking.flight.name %></td>
+				<td><%= @booking.flight.departure.code %></td>
+				<td><%= @booking.flight.arrival.code %></td>
+				<td><%= @booking.flight.date.strftime("%m-%d-%Y") %></td>
+				<td><%= @booking.flight.date.strftime("%H:%M") %></td>
+				<td><%= @booking.flight.duration %> mins</td>
+			</tr>
+		</table>
+	</div>
+	<div class="personal-details">
+		<h2>- Personal Details -</h2>
+		<table class="flight-info">
+			<tr>
+				<th>Name</th>
+				<td><%= @booking.passenger.name %></th>
+			</tr>
+			 <tr>
+				<th>Email</th>
+				<td><%= @booking.passenger.email %></td>
+			</tr>
+		</table>
+
+</section>
