@@ -32,105 +32,82 @@ airports.each do |a|
 		else
 			Flight.create!(departure_id: a,
 					   	   arrival_id: b,
-					   	   date: b.even? ? 2.days.from_now : 2.days.from_now + 50000,
+					   	   date: 2.days.from_now,
 					   	   name: "TK#{list.sample}#{list.sample}#{list.sample}#{list.sample}",
 						   duration: (100..200).to_a.sample)
-		end
-	end
-end
-
-airports.reverse.each do |a|
-	airports.reverse.each do |b|
-		if a == b
-			next
-		else
-			Flight.create!(departure_id: a,
-					   	   arrival_id: b,
-					   	   date: b.even? ? 3.days.from_now : 3.days.from_now + 50000,
+			Flight.create!(departure_id: b,
+					   	   arrival_id: a,
+					   	   date: 2.days.from_now + 50000,
 					   	   name: "TK#{list.sample}#{list.sample}#{list.sample}#{list.sample}",
 						   duration: (100..200).to_a.sample)
-		end
-	end
-end
-
-airports.each do |a|
-	airports.each do |b|
-		if a == b
-			next
-		else
 			Flight.create!(departure_id: a,
 					   	   arrival_id: b,
-					   	   date: b.even? ? 3.days.from_now : 3.days.from_now + 50000,
+					   	   date: 3.days.from_now,
 					   	   name: "TK#{list.sample}#{list.sample}#{list.sample}#{list.sample}",
 						   duration: (100..200).to_a.sample)
-		end
-	end
-end
-
-airports.reverse.each do |a|
-	airports.reverse.each do |b|
-		if a == b
-			next
-		else
-			Flight.create!(departure_id: a,
-					   	   arrival_id: b,
-					   	   date: b.even? ? 2.days.from_now : 2.days.from_now + 50000,
+			Flight.create!(departure_id: b,
+					   	   arrival_id: a,
+					   	   date: 3.days.from_now + 50000,
 					   	   name: "TK#{list.sample}#{list.sample}#{list.sample}#{list.sample}",
 						   duration: (100..200).to_a.sample)
-		end
-	end
-end
-
-airports.each do |a|
-	airports.each do |b|
-		if a == b
-			next
-		else
 			Flight.create!(departure_id: a,
 					   	   arrival_id: b,
-					   	   date: b.even? ? 4.days.from_now : 4.days.from_now + 50000,
+					   	   date: 4.days.from_now,
 					   	   name: "TK#{list.sample}#{list.sample}#{list.sample}#{list.sample}",
 						   duration: (100..200).to_a.sample)
-		end
-	end
-end
-
-airports.reverse.each do |a|
-	airports.reverse.each do |b|
-		if a == b
-			next
-		else
-			Flight.create!(departure_id: a,
-					   	   arrival_id: b,
-					   	   date: b.even? ? 5.days.from_now : 5.days.from_now + 50000,
+			Flight.create!(departure_id: b,
+					   	   arrival_id: a,
+					   	   date: 4.days.from_now + 50000,
 					   	   name: "TK#{list.sample}#{list.sample}#{list.sample}#{list.sample}",
 						   duration: (100..200).to_a.sample)
-		end
-	end
-end
-
-airports.each do |a|
-	airports.each do |b|
-		if a == b
-			next
-		else
 			Flight.create!(departure_id: a,
 					   	   arrival_id: b,
-					   	   date: b.even? ? 5.days.from_now : 5.days.from_now + 50000,
+					   	   date: 5.days.from_now,
 					   	   name: "TK#{list.sample}#{list.sample}#{list.sample}#{list.sample}",
 						   duration: (100..200).to_a.sample)
-		end
-	end
-end
-
-airports.reverse.each do |a|
-	airports.reverse.each do |b|
-		if a == b
-			next
-		else
+			Flight.create!(departure_id: b,
+					   	   arrival_id: a,
+					   	   date: 5.days.from_now + 50000,
+					   	   name: "TK#{list.sample}#{list.sample}#{list.sample}#{list.sample}",
+						   duration: (100..200).to_a.sample)
 			Flight.create!(departure_id: a,
 					   	   arrival_id: b,
-					   	   date: b.even? ? 4.days.from_now : 4.days.from_now + 50000,
+					   	   date: 2.days.from_now + 20000,
+					   	   name: "TK#{list.sample}#{list.sample}#{list.sample}#{list.sample}",
+						   duration: (100..200).to_a.sample)
+			Flight.create!(departure_id: b,
+					   	   arrival_id: a,
+					   	   date: 2.days.from_now + 40000,
+					   	   name: "TK#{list.sample}#{list.sample}#{list.sample}#{list.sample}",
+						   duration: (100..200).to_a.sample)
+			Flight.create!(departure_id: a,
+					   	   arrival_id: b,
+					   	   date: 3.days.from_now + 20000,
+					   	   name: "TK#{list.sample}#{list.sample}#{list.sample}#{list.sample}",
+						   duration: (100..200).to_a.sample)
+			Flight.create!(departure_id: b,
+					   	   arrival_id: a,
+					   	   date: 3.days.from_now + 40000,
+					   	   name: "TK#{list.sample}#{list.sample}#{list.sample}#{list.sample}",
+						   duration: (100..200).to_a.sample)
+			Flight.create!(departure_id: a,
+					   	   arrival_id: b,
+					   	   date: 4.days.from_now + 20000,
+					   	   name: "TK#{list.sample}#{list.sample}#{list.sample}#{list.sample}",
+						   duration: (100..200).to_a.sample)
+			Flight.create!(departure_id: b,
+					   	   arrival_id: a,
+					   	   date: 4.days.from_now + 40000,
+					   	   name: "TK#{list.sample}#{list.sample}#{list.sample}#{list.sample}",
+						   duration: (100..200).to_a.sample)
+			Flight.create!(departure_id: a,
+					   	   arrival_id: b,
+					   	   date: 5.days.from_now + 20000,
+					   	   name: "TK#{list.sample}#{list.sample}#{list.sample}#{list.sample}",
+						   duration: (100..200).to_a.sample)
+			Flight.create!(departure_id: b,
+					   	   arrival_id: a,
+					   	   date: 5.days.from_now + 40000,
 					   	   name: "TK#{list.sample}#{list.sample}#{list.sample}#{list.sample}",
 						   duration: (100..200).to_a.sample)
 		end

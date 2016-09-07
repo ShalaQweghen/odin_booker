@@ -16,7 +16,7 @@
 				<td><%= @booking.flight.arrival.code %></td>
 				<td><%= @booking.flight.date.strftime("%m-%d-%Y") %></td>
 				<td><%= @booking.flight.date.strftime("%H:%M") %></td>
-				<td><%= @booking.flight.duration %> mins</td>
+				<td><%= @booking.flight.duration/60 %>h <%= @booking.flight.duration%60 %>m</td>
 			</tr>
 		</table>
 	</div>

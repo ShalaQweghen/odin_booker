@@ -15,7 +15,7 @@
 					<td><%= @flight.arrival.code %></td>
 					<td><%= @flight.date.strftime("%m-%d-%Y") %></td>
 					<td><%= @flight.date.strftime("%H:%M") %></td>
-					<td><%= @flight.duration %> mins</td>
+					<td><%= @flight.duration/60 %>h <%= @flight.duration%60 %>m</td>
 				</tr>
 			</table>
 			<%= form_for(@booking, url: bookings_new_path) do |f| %>
@@ -26,9 +26,9 @@
 						<div class="passenger">
 							<h3>Passenger</h3>
 							<%= form.label(:name, class: "label label-name") %>
-							<%= form.text_field(:name, class: "input name") %>
+							<%= form.text_field(:name, class: "input name", required: true) %>
 							<%= form.label(:email, class: "label label-name") %>
-							<%= form.email_field(:email, class: "input email") %>
+							<%= form.email_field(:email, class: "input email", required: true) %>
 						</div>
 					<% end %>
 				<%= f.submit "Book", class: "flights-submit user-submit" %>
