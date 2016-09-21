@@ -1,0 +1,12 @@
+Dear <%= @passenger.name %>,
+
+Thank you for your booking. Your flight info is as follows:
+
+Flight No: <%= @booking.flight.name %>
+Departure: <%= @booking.flight.departure.code %>
+Arrival	 : <%= @booking.flight.arrival.code %>
+Date 		 : <%= @booking.flight.date.strftime("%m-%d-%Y") %>
+Time 		 : <%= @booking.flight.date.strftime("%H:%M") %>
+Duration : <%= @booking.flight.duration/60 %>h <%= @booking.flight.duration%60 %>m
+
+We hope you have a very comfortable flight!

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<style>
+			.flight-info {
+				border: 1px solid #dfe2e5;
+				margin-top: 10px;
+				margin-bottom: 10px;
+			}
+
+			.flight-info th, .flight-info td {
+				border: 1px solid #dfe2e5;
+				text-align: left;
+				padding: 8px 10px;
+			}
+
+			th {
+				font-weight: 600;
+			}
+		</style>
+	</head>
+	<body>
+		<h3>Dear <%= @passenger.name %>,</h3>
+		<p>Thank you for your booking. Your flight info is as follows:</p>
+		<table class="flight-info">
+			<tr>
+				<th>Flight No</th>
+				<th>Departure</th>
+				<th>Arrival</th>
+				<th>Date</th>
+				<th>Time</th>
+				<th>Duration</th>
+			</tr>
+			 <tr>
+				<td><%= @booking.flight.name %></td>
+				<td><%= @booking.flight.departure.code %></td>
+				<td><%= @booking.flight.arrival.code %></td>
+				<td><%= @booking.flight.date.strftime("%m-%d-%Y") %></td>
+				<td><%= @booking.flight.date.strftime("%H:%M") %></td>
+				<td><%= @booking.flight.duration/60 %>h <%= @booking.flight.duration%60 %>m</td>
+			</tr>
+		</table>
+		<p>We hope you have a very comfortable flight!</p>
+	</body>
+</html>

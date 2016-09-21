@@ -1,2 +1,2 @@
-# Odin Flight Booker
-Prepared for the advanced forms [project](http://www.theodinproject.com/ruby-on-rails/building-advanced-forms?ref=lnav) of the [Rails course](http://www.theodinproject.com/ruby-on-rails) on [The Odin Project](http://www.theodinproject.com/home).
+## Odin Flight Booker with Thank You Mailer
+Prepared for the advanced forms [project](http://www.theodinproject.com/ruby-on-rails/building-advanced-forms?ref=lnav) and the mailers [project](http://www.theodinproject.com/ruby-on-rails/sending-confirmation-emails?ref=lnav) of the [Rails course](http://www.theodinproject.com/ruby-on-rails) on [The Odin Project](http://www.theodinproject.com/home).
